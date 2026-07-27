@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Image Gallery</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:20px;
+            background:#f2f2f2;
+            font-family:Arial,sans-serif;
+        }
+
+        h2{
+            text-align:center;
+            color:darkblue;
+        }
+
+        .gallery{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
+        }
+
+        .gallery img{
+            width:250px;
+            height:180px;
+            object-fit:cover;
+            border:4px solid white;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+            transition:0.4s;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.1);
+            border-color:blue;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>CSS Image Gallery</h2>
+
+<div class="gallery">
+
+<img src="file:///C:/Users/SCMS/Downloads/download.webp" alt="Image 1">
+<img src="file:///C:/Users/SCMS/Downloads/download%20(1).webp" alt="Image 2">
+<img src="file:///C:/Users/SCMS/Downloads/download%20(2).webp" alt="Image 3">
+<img src="file:///C:/Users/SCMS/Downloads/download%20(3).webp" alt="Image 4">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Demo</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .container{
+            width: 450px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2{
+            color: darkblue;
+        }
+
+        p{
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:darkblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>JavaScript Date Object</h2>
+
+<p id="time"></p>
+<p id="date"></p>
+<p id="formatted"></p>
+<p id="difference"></p>
+
+<button onclick="showDate()">Show Date & Time</button>
+
+</div>
+
+<script>
+
+function showDate(){
+
+    
+    let today = new Date();
+
+    document.getElementById("time").innerHTML =
+    "<b>Current Time:</b> " + today.toLocaleTimeString();
+
+    document.getElementById("date").innerHTML =
+    "<b>Current Date:</b> " + today.toDateString();
+
+    document.getElementById("formatted").innerHTML =
+    "<b>Formatted Date:</b> " +
+    today.getDate() + "/" +
+    (today.getMonth()+1) + "/" +
+    today.getFullYear();
+
+    let future = new Date("January 1, 2027");
+
+    let diff = future - today;
+
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    document.getElementById("difference").innerHTML =
+    "<b>Days until 1 Jan 2027:</b> " + days;
+
+}
+
+</script>
+
+</body>
+</html>
